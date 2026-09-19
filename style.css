@@ -100,4 +100,7 @@ input::placeholder {
     #forgot_pass{
         width: 60vw;
     }
+    #teacher_login_link{
+        width: 60vw;
+    }
 }
