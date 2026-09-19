@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    background-image: linear-gradient(to right, rgb(97, 181, 202), rgb(37, 84, 185)); 
+}
+.main{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.cred{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+input{
+    width:25vw;
+    height:5vh;
+    border-radius:10px;
+    padding:6px;
+}
+input::placeholder {
+  color: #444343;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-style: bold;
+  opacity: 1; 
+}
+
+#login{
+    width:25vw;
+    height:6vh;
+    border-radius:10px;
+    background-color: rgb(55, 55, 175);
+    color:white;
+}
+
+#register_btn_register{
+    width:25vw;
+    height:6vh;
+    border-radius:10px;
+    background-color: rgb(55, 55, 175);
+    color:white;
+}
+
+#register_btn_login{
+    text-decoration: none;
+    color:black;
+}
+#forgot_pass{
+    width:20vw;
+    height:3vh;
+    background:none;
+    border-radius:10px;
+    border:0;
+}
+#main_heading{
+    font-size:3em;
+}
+
+#login_heading, #register_heading{
+    font-size:2em;
+}
+#teacher_login_link, #student_login_link{
+    text-decoration: none;
+    color:black;
+    background-color: rgb(77, 159, 214);
+    width: 20vw;
+    height: 3vh;
+    padding: 6px;
+    text-align: center;
+    border-radius: 10px;
+}
+#login_link_from_register{
+    text-decoration: none;
+    color:black;
+}
+
+@media (max-width: 600px) {
+    #main_heading{
+        font-size:2.3em;
+}
+    input{
+        width: 60vw;
+    }
+    #login{
+        width: 60vw;
+    }
+    #register_btn_register{
+        width: 60vw;
+    }
+    #forgot_pass{
+        width: 60vw;
+    }
+}
