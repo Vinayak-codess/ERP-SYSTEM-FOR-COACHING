@@ -28,13 +28,36 @@ if (!mysqli_query($conn, $create_table)) {
     echo "Error creating table: " . mysqli_error($conn);
 }
 
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo "Invalid request method";
+    mysqli_close($conn);
+    exit;
+}
+
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$confirm_password = $_POST['confirm_password'] ?? '';    
 $course_id = $_POST['course_id'];
 $batch_id = $_POST['batch_id'];
 $admission_date = $_POST['admission_date'];
+
+
+
+
+if ($name === '' || $phone === '' || $email === '' || $password === '' || $confirm_password === '' || $course_id === '' || $batch_id === '' || $admission_date === '') {
+    echo "Please fill in all required fields.";
+    mysqli_close($conn);
+    exit;
+}
+
+if ($password !== $confirm_password) {
+    echo "Passwords do not match.";
+    mysqli_close($conn);
+    exit;
+}
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
