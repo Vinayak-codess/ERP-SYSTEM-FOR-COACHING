@@ -1,8 +1,31 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "erp system");
+$conn = mysqli_connect("localhost", "root", "");
 if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
+    die(" connection failed: " . mysqli_connect_error());
+}
+
+$db = "erp_system";
+$create_db = "CREATE DATABASE IF NOT EXISTS $db";
+if (!mysqli_query($conn, $create_db)) {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+
+mysqli_select_db($conn, $db);
+
+$create_table = "CREATE TABLE IF NOT EXISTS student (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    Phone_number VARCHAR(15) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    course_id INT(11) NOT NULL,
+    batch_id INT(11) NOT NULL,
+    admission_date DATE NOT NULL
+)";
+
+if (!mysqli_query($conn, $create_table)) {
+    echo "Error creating table: " . mysqli_error($conn);
 }
 
 $name = $_POST['name'];
