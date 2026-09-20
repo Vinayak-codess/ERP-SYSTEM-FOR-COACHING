@@ -1,95 +1,71 @@
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
 }
-body{
-    background-image: linear-gradient(to right, rgb(97, 181, 202), rgb(37, 84, 185)); 
-=======
 body {
-    margin: 0;
     background-image: linear-gradient(to right, rgb(97, 181, 202), rgb(37, 84, 185));
->>>>>>> 73b3c26 (Database changes, backend and clean project structure)
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 35px 100px 35px 100px;
+    width: 420px;
+    max-width: 90vw;
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
-
-.cred {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
+.cred{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
 }
-
-input {
-    width: 25vw;
-    height: 5vh;
-    border-radius: 10px;
-    padding: 6px;
-    border: none;
-    outline: none;
+input{
+    width:25vw;
+    height:5vh;
+    border-radius:10px;
+    padding:6px;
 }
-
 input::placeholder {
-    color: #444343;
-    font-size: 0.9rem;
-    font-family: inherit;
-    font-style: bold;
-    opacity: 1;
+  color: #444343;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-style: bold;
+  opacity: 1; 
 }
 
-
-#register_btn_register,
-#login {
-    width: 25vw;
-    height: 6vh;
-    border-radius: 10px;
-    background-color: #3737af;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
+#login{
+    width:25vw;
+    height:6vh;
+    border-radius:10px;
+    background-color: rgb(55, 55, 175);
+    color:white;
 }
 
-#register_btn_register:hover {
-    background-color: #3737afaf;
-
+#register_btn_register{
+    width:25vw;
+    height:6vh;
+    border-radius:10px;
+    background-color: rgb(55, 55, 175);
+    color:white;
 }
 
-#login:hover {
-    background-color: #3737afaf;
-}
-
-/* Select  Course and Batch */
-#course_id,
-#batch_id {
-    padding: 12px;
-    outline: none;
-    cursor: pointer;
-}
-
-.select {
-    display: flex;
-    gap: 8px;
-
-}
-
-#register_btn_login {
+#register_btn_login{
     text-decoration: none;
-<<<<<<< HEAD
     color:black;
 }
 #forgot_pass{
@@ -100,39 +76,17 @@ input::placeholder {
     border:0;
 }
 #main_heading{
-    font-size:3em;
+    font-size:2.5em;
     margin-bottom: 20px;
 }
 
 #login_heading, #register_heading{
     font-size:2em;
     margin-bottom: 20px;
-=======
-    color: black;
 }
-
-#forgot_pass {
-    width: 20vw;
-    height: 3vh;
-    background: none;
-    border-radius: 10px;
-    border: 0;
->>>>>>> 73b3c26 (Database changes, backend and clean project structure)
-}
-
-#main_heading {
-    font-size: 3em;
-}
-
-#login_heading,
-#register_heading {
-    font-size: 2em;
-}
-
-#teacher_login_link,
-#student_login_link {
+#teacher_login_link, #student_login_link{
     text-decoration: none;
-    color: black;
+    color:black;
     background-color: rgb(77, 159, 214);
     width: 20vw;
     height: 3vh;
@@ -140,10 +94,9 @@ input::placeholder {
     text-align: center;
     border-radius: 10px;
 }
-
-#login_link_from_register {
+#login_link_from_register{
     text-decoration: none;
-    color: black;
+    color:black;
 }
 .select-row {
     display: flex;
@@ -166,9 +119,21 @@ input::placeholder {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
+.captcha-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.captcha-title, 
+#showCaptcha {
+    text-align: center;
+}
 
 @media (max-width: 600px) {
-<<<<<<< HEAD
     #main_heading{
         font-size:2.3em;
     }
@@ -179,30 +144,15 @@ input::placeholder {
         width: 100%;
     }
     #login{
-=======
-    #main_heading {
-        font-size: 2.3em;
-    }
-
-    input {
         width: 60vw;
     }
-
-    #login {
->>>>>>> 73b3c26 (Database changes, backend and clean project structure)
+    #register_btn_register{
         width: 60vw;
     }
-
-    #register_btn_register {
+    #forgot_pass{
         width: 60vw;
     }
-
-    #forgot_pass {
-        width: 60vw;
-    }
-
-    #teacher_login_link,
-    #student_login_link {
+    #teacher_login_link, #student_login_link{
         width: 60vw;
     }
 }
