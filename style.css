@@ -1,5 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body{
-    margin:0;
     background-image: linear-gradient(to right, rgb(97, 181, 202), rgb(37, 84, 185)); 
 }
 .main{
@@ -64,10 +67,12 @@ input::placeholder {
 }
 #main_heading{
     font-size:3em;
+    margin-bottom: 20px;
 }
 
 #login_heading, #register_heading{
     font-size:2em;
+    margin-bottom: 20px;
 }
 #teacher_login_link, #student_login_link{
     text-decoration: none;
@@ -83,13 +88,37 @@ input::placeholder {
     text-decoration: none;
     color:black;
 }
+.select-row {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.select-row select {
+    flex: 1;
+    min-width: 0;
+    height: calc(5vh + 2px);
+    border-radius: 10px;
+    padding: 6px;
+    border: 1px solid #767676;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.select-row select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
 
 @media (max-width: 600px) {
     #main_heading{
         font-size:2.3em;
-}
+    }
     input{
         width: 60vw;
+    }
+    .select-row {
+        width: 100%;
     }
     #login{
         width: 60vw;
