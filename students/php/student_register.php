@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 require "../../config/db.php";
 
-// Accept both JSON payload (Axios/Fetch) and standard Form POST
+
 $rawInput = file_get_contents("php://input");
 $data = json_decode($rawInput, true);
 
@@ -18,7 +18,7 @@ $course_id      = intval($data["course_id"] ?? 0);
 $batch_id       = intval($data["batch_id"] ?? 0);
 $admission_date = trim($data["admission_date"] ?? '');
 
-// Input Validation
+
 if (empty($name) || empty($phone) || empty($email) || empty($password) || $course_id <= 0 || $batch_id <= 0 || empty($admission_date)) {
     http_response_code(400);
     echo json_encode(["status" => "error", "message" => "All fields are required and must be valid."]);
@@ -33,7 +33,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-// Use Prepared Statements to prevent SQL Injection
 $stmt = mysqli_prepare($conn, "INSERT INTO student (name, Phone_number, Email, Password, course_id, batch_id, admission_date) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
 if ($stmt) {
