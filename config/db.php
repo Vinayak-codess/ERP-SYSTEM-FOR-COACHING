@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "kunal123", "erp_system"); //temp password of my local device
+$conn = mysqli_connect("localhost", "root", "", "erp_system"); 
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
