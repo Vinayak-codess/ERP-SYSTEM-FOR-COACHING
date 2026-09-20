@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="main">
+        <h3 id="register_heading">Student Registration</h3>
+        <form action="#" class="form">
+            <div class="cred">
+                <input type="text" name="name" id="name" placeholder="Full Name" required><br>
+                <input type="tel" name="phone" id="phone" placeholder="Phone No."><br>
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="select">
+
+                    <select name="course_id" id="course_id">
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="1">JEE</option>
+                        <option value="2">NEET</option>
+                        <option value="3">Foundation</option>
+                    </select><br>
+                    <select name="batch_id" id="batch_id">
+                        <option value="" disabled selected>Select Batch</option>
+                        <option value="1">Batch A</option>
+                        <option value="2">Batch B</option>
+                    </select><br>
+                </div>
+                <input type="date" id="admission_date" name="admission_date"><br>
+            </div>
+            <button id="register_btn_register">Register</button><br>
+            <a id="login_link_from_register" href="student_login.html">Already have an account? Login</a><br>
+        </form>
+    </div>
+</body>
+<script type="module" src="../js/student_register.js"></script>
+
+</html>

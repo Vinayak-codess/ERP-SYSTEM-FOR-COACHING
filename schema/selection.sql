@@ -1,0 +1,11 @@
+USE erp_system;
+
+CREATE TABLE IF NOT EXISTS course (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS batch (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    batch_name VARCHAR(100) NOT NULL
+);
