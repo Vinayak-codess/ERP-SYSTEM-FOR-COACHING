@@ -2,7 +2,7 @@ import { getData, postData } from "../../js/api.js";
 
 const form = document.querySelector(".form");
 const courseSelect = document.getElementById("course_id");
-const batches = await getData("/courses/batch_get.php");
+const batchSelect = document.getElementById("batch_id");
 
 
 async function loadDropdowns() {

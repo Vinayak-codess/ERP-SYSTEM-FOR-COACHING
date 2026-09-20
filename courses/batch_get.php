@@ -1,5 +1,5 @@
 <?php
-require "../../config/db.php";
+require "../config/db.php";
 
 $result = mysqli_query($conn, "SELECT id, batch_name FROM batch");
 
