@@ -1,5 +1,5 @@
 <?php 
- $conn = mysqli_connect("localhost", "root", "", "erp system");
+ $conn = mysqli_connect("localhost", "root", "", "erp_system");
  if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
  }
