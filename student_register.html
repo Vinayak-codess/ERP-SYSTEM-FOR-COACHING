@@ -15,7 +15,10 @@
                     <input type="text" name="name" id="name" placeholder="Full Name" required><br>
                     <input type="tel" name="phone" id="phone" placeholder="Phone No."><br>
                     <input type="email" name="email" id="email" placeholder="Email"><br>
-                    <input type="password" name="password" id="password" placeholder="Password"><br>
+                     <input type="password" id="password" name="password" placeholder="Create Password"
+                                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}"
+                         title="Password must contain uppercase, lowercase, number, special character and 8+ characters"required>
+                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br>
                       <div class="select-row">
                       <select name="course_id" id="course_id">
                     <option value="" disabled selected>Select Course</option>
