@@ -7,7 +7,7 @@ const batchSelect = document.getElementById("batch_id");
 
 async function loadDropdowns() {
     try {
-        // Courses
+     
         const courses = await getData("/courses/course_get.php");
         courses.forEach((course) => {
             courseSelect.innerHTML += `
@@ -15,7 +15,7 @@ async function loadDropdowns() {
             `;
         });
 
-        // Batches
+       
         const batches = await getData("/courses/batch_get.php");
         batches.forEach((batch) => {
             batchSelect.innerHTML += `
