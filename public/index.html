@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/css/index.css">
 </head>
-
 <body>
 
-</body>
-<script src="./js//api.js"></script>
-<script type="module" src="student_register.js"></script>
+  <div class="card-container">
+    
+    <div class="left-section">
+      <div>
+        <h1 class="main-title">
+            Coaching Institute Name
+        </h1>
+        
+        <p class="subtitle">
+          Personalized mentorship, comprehensive test series, and top-tier faculty tailored for competitive exams like JEE, NEET, and Foundation.
+        </p>
 
+        <div class="highlights">
+          <div class="highlight-tag">
+            <span class="check-icon">✓</span> 98% Success Rate
+          </div>
+          <div class="highlight-tag">
+            <span class="check-icon">✓</span> 1-on-1 Mentorship
+          </div>
+          <div class="highlight-tag">
+            <span class="check-icon">✓</span> Daily Mock Drills
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-area">
+        <img src="" alt="image">
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="sa-container">
+        <div class="sa-badge">
+          <a class="sa-text" href="/public/admin.html">S.A.</a>
+        </div>
+      </div>
+
+      <div class="auth-box">
+        <div class="auth-header">
+          <h2 class="portal-title">Sign in or Register</h2>
+          <p class="portal-desc">Access your tests, attendance, and attend online classes</p>
+        </div>
+
+        <button class="btn btn-primary" onclick="window.location.href = '/public/login.html';">
+          <span>Login to Portal</span>
+        </button>
+
+        <button class="btn btn-secondary"  onclick="window.location.href = '/students/html/student_register.html';">
+          Register as New Student
+        </button>
+      </div>
+
+      <div class="footer-text">
+        © 2026 Coaching Institute Management. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+
+</body>
 </html>
